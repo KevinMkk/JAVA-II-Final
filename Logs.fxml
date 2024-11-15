@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luctfxapp.Logs">
+    <Pane layoutX="3.0" prefHeight="127.0" prefWidth="594.0" style="-fx-background-color: black; -fx-border-color: white;">
+        <Pane layoutX="8.0" layoutY="42.0" prefHeight="44.0" prefWidth="578.0" style="-fx-background-color: white;">
+            <ImageView fitHeight="35.0" fitWidth="88.0" layoutX="26.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Flag_of_Malaysia.svg.png" />
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="63.0" layoutX="501.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Flag_of_Lesotho.svg.png" />
+            </ImageView>
+        </Pane>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Lim_Kok_Wing_University-logo-A8C278E48F-seeklogo.com.png" />
+        </ImageView>
+    </Pane>
+    <TableView fx:id="logsTable" layoutX="14.0" layoutY="137.0" prefHeight="250.0" prefWidth="572.0">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="rollColumn" text="Roll" />
+            <TableColumn fx:id="usernameColumn" text="Username" />
+            <TableColumn fx:id="entryLogColumn" text="Entry Log" />
+            <TableColumn fx:id="exitLogColumn" text="Exit Log" />
+            <TableColumn fx:id="logDurationColumn" text="Log Duration" />
+        </columns>
+    </TableView>
+    <Button fx:id="backButton" layoutX="280.0" layoutY="572.0" mnemonicParsing="false" style="-fx-background-color: silver;" text="Back" />
+</AnchorPane>

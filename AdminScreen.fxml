@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luctfxapp.AdminScreen">
+    <Pane layoutX="3.0" prefHeight="127.0" prefWidth="594.0" style="-fx-background-color: black; -fx-border-color: white;">
+       <Pane layoutX="8.0" layoutY="42.0" prefHeight="44.0" prefWidth="578.0" style="-fx-background-color: white;">
+          <ImageView fitHeight="35.0" fitWidth="88.0" layoutX="26.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+             <Image url="@Flag_of_Malaysia.svg.png" />
+          </ImageView>
+          <ImageView fitHeight="36.0" fitWidth="63.0" layoutX="501.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+             <Image url="@Flag_of_Lesotho.svg.png" />
+          </ImageView>
+       </Pane>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Lim_Kok_Wing_University-logo-A8C278E48F-seeklogo.com.png" />
+        </ImageView>
+    </Pane>
+   <VBox layoutX="14.0" layoutY="137.0" prefHeight="255.0" prefWidth="108.0" style="-fx-background-color: silver;">
+      <TextFlow layoutX="10.0" layoutY="203.0" prefHeight="7.0" prefWidth="108.0" />
+      <Button fx:id="profileButton" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Profile" />
+      <TextFlow prefHeight="7.0" prefWidth="108.0" />
+      <Button fx:id="lecturersButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Lecturers" />
+      <TextFlow layoutX="10.0" layoutY="232.0" prefHeight="7.0" prefWidth="108.0" />
+      <Button fx:id="studentsButton" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Students" />
+      <TextFlow layoutX="10.0" layoutY="53.0" prefHeight="7.0" prefWidth="108.0" />
+      <Button fx:id="academicsButton" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Academics" />
+      <TextFlow layoutX="10.0" layoutY="153.0" prefHeight="7.0" prefWidth="108.0" />
+      <Button fx:id="logoutButton" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Logout" />
+      <TextFlow layoutX="10.0" layoutY="10.0" prefHeight="7.0" prefWidth="108.0" style="fx-background-color: black;" />
+   </VBox>
+   <Pane fx:id="Welcome" layoutX="127.0" layoutY="137.0" prefHeight="255.0" prefWidth="467.0" style="-fx-background-color: silver;">
+      <Label alignment="CENTER" layoutX="103.0" layoutY="14.0" prefHeight="69.0" prefWidth="261.0" text="Welcome">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="103.0" layoutY="76.0" prefHeight="26.0" prefWidth="261.0" text="back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserName" alignment="CENTER" layoutX="103.0" layoutY="113.0" prefHeight="44.0" prefWidth="261.0" style="-fx-font-weight: bold;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="103.0" layoutY="172.0" prefHeight="69.0" prefWidth="261.0" text="admin">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+   </Pane>
+   <AnchorPane fx:id="Profile" layoutX="127.0" layoutY="137.0" prefHeight="255.0" prefWidth="467.0" style="-fx-background-color: silver;">
+      <ImageView fx:id="profileImageView" fitHeight="145.0" fitWidth="142.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <Image url="@profile-icon-design-free-vector.jpg" />
+      </ImageView>
+      <Button layoutY="158.0" mnemonicParsing="false" onAction="#changeDisplayPicture" prefHeight="25.0" prefWidth="142.0" text="Change display picture" />
+      <Button layoutX="154.0" layoutY="229.0" mnemonicParsing="false" onAction="#updateEmployeeDetails" prefHeight="25.0" prefWidth="142.0" text="Apply changes" />
+      <ListView layoutX="154.0" prefHeight="221.0" prefWidth="306.0" style="-fx-background-color: black;" />
+      <Label layoutX="161.0" layoutY="44.0" prefHeight="17.0" prefWidth="124.0" text="User name:" textFill="WHITE" />
+      <Label layoutX="161.0" layoutY="74.0" prefHeight="17.0" prefWidth="124.0" text="Position:" textFill="WHITE" />
+      <Label layoutX="161.0" layoutY="104.0" prefHeight="17.0" prefWidth="124.0" text="Date of employment:" textFill="WHITE" />
+      <Label layoutX="160.0" layoutY="134.0" prefHeight="17.0" prefWidth="124.0" text="Contact information:" textFill="WHITE" />
+      <Label layoutX="160.0" layoutY="192.0" prefHeight="17.0" prefWidth="124.0" text="Address:" textFill="WHITE" />
+      <Label layoutX="161.0" layoutY="164.0" prefHeight="17.0" prefWidth="124.0" text="Employee number:" textFill="WHITE" />
+      <TextField fx:id="userNameField" layoutX="284.0" layoutY="40.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="positionField" layoutX="284.0" layoutY="70.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="employmentDateField" layoutX="284.0" layoutY="100.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="contactInfoField" layoutX="284.0" layoutY="130.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="employeeNumberField" layoutX="284.0" layoutY="160.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="addressField" layoutX="284.0" layoutY="190.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="160.0" layoutY="12.0" prefHeight="17.0" prefWidth="124.0" text="Full name:" textFill="WHITE" />
+      <TextField fx:id="namesField" layoutX="283.0" layoutY="8.0" prefHeight="17.0" prefWidth="149.0" />
+   </AnchorPane>
+   <AnchorPane fx:id="messagePane" layoutX="108.0" layoutY="158.0" prefHeight="109.0" prefWidth="413.0" style="-fx-background-color: white; -fx-border-color: black;" visible="false">
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="26.0" layoutY="7.0" prefHeight="95.0" prefWidth="368.0" />
+      <Button fx:id="closeMessageButton" layoutX="385.0" layoutY="5.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: red; -fx-border-radius: 0.5;">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@66847.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </AnchorPane>
+   <AnchorPane fx:id="Lecturers" layoutX="127.0" layoutY="137.0" prefHeight="255.0" prefWidth="467.0" style="-fx-background-color: silver;">
+      <ScrollPane prefHeight="255.0" prefWidth="467.0">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="599.0">
+            <GridPane fx:id="employeeGrid" alignment="CENTER" gridLinesVisible="true" prefHeight="255.0" prefWidth="600.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="58.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="123.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="122.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="141.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="61.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="79.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="25.0" text="ID" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="97.0" text="User name" GridPane.columnIndex="1" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="Position" GridPane.columnIndex="2" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="155.0" text="Contact info" GridPane.columnIndex="3" />
+               <Label alignment="CENTER" layoutX="10.0" layoutY="41.0" prefHeight="17.0" prefWidth="25.0" text="ID" />
+               <Label alignment="CENTER" layoutX="10.0" layoutY="41.0" prefHeight="17.0" prefWidth="25.0" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="34.0" layoutY="41.0" prefHeight="17.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="112.0" layoutY="41.0" prefHeight="17.0" prefWidth="193.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="252.0" layoutY="41.0" prefHeight="17.0" prefWidth="155.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            </GridPane>
+         </AnchorPane>
+      </ScrollPane>
+   </AnchorPane>
+   <AnchorPane fx:id="Academics" layoutX="127.0" layoutY="137.0" prefHeight="255.0" prefWidth="467.0" style="-fx-background-color: silver;">
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="58.0" prefWidth="182.0" text="Academic year:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="academicYearLabel" layoutX="206.0" layoutY="25.0" prefHeight="25.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="60.0" prefHeight="58.0" prefWidth="182.0" text="Semester:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="semesterLabel" layoutX="205.0" layoutY="70.0" prefHeight="26.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="386.0" layoutY="26.0" mnemonicParsing="false" onAction="#addNewSemester" prefHeight="69.0" prefWidth="67.0" text="New semester" textAlignment="CENTER" wrapText="true" />
+      <TitledPane layoutX="14.0" layoutY="110.0" prefHeight="133.0" prefWidth="441.0" text="Classes">
+         <ScrollPane prefHeight="200.0" prefWidth="200.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="431.0">
+               <GridPane fx:id="classGrid" gridLinesVisible="true" layoutY="-1.0" prefWidth="432.0">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="0.0" prefWidth="35.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="107.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="160.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="139.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="117.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" text="ID" textAlignment="CENTER" />
+                  <Label prefHeight="17.0" prefWidth="165.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="109.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="165.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="32.0" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="116.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="34.0" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="164.0" text="Faculty" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="108.0" text="Class name" textAlignment="CENTER" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Select" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Select" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="View All" GridPane.columnIndex="3" />
+               </GridPane>
+            </AnchorPane>
+         </ScrollPane>
+      </TitledPane>
+   </AnchorPane>
+   <AnchorPane fx:id="Students" layoutX="127.0" layoutY="137.0" prefHeight="255.0" prefWidth="467.0" style="-fx-background-color: silver;">
+      <ScrollPane prefHeight="255.0" prefWidth="467.0">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="465.0">
+            <GridPane fx:id="studentsGridPane" alignment="CENTER" gridLinesVisible="true" prefWidth="467.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="28.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="82.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="144.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="134.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="99.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="79.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="25.0" text="ID" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="97.0" text="Full name" GridPane.columnIndex="1" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="Course" GridPane.columnIndex="2" />
+               <Label alignment="CENTER" prefHeight="17.0" prefWidth="155.0" text="Contact info" GridPane.columnIndex="3" />
+               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Select" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="10.0" layoutY="41.0" prefHeight="17.0" prefWidth="25.0" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="34.0" layoutY="41.0" prefHeight="17.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="112.0" layoutY="41.0" prefHeight="17.0" prefWidth="193.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label alignment="CENTER" layoutX="252.0" layoutY="41.0" prefHeight="17.0" prefWidth="155.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            </GridPane>
+         </AnchorPane>
+      </ScrollPane>
+   </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="663.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luctfxapp.LecturerScreen">
+    <Pane layoutX="3.0" prefHeight="127.0" prefWidth="594.0" style="-fx-background-color: black; -fx-border-color: white;">
+        <Pane layoutX="8.0" layoutY="42.0" prefHeight="44.0" prefWidth="578.0" style="-fx-background-color: white;">
+            <ImageView fitHeight="35.0" fitWidth="88.0" layoutX="26.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Flag_of_Malaysia.svg.png" />
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="63.0" layoutX="501.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Flag_of_Lesotho.svg.png" />
+            </ImageView>
+        </Pane>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Lim_Kok_Wing_University-logo-A8C278E48F-seeklogo.com.png" />
+        </ImageView>
+    </Pane>
+    <BorderPane layoutX="80.0" layoutY="127.0">
+        <!-- Top Section: Title -->
+        <top>
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Lecturer Attendance and Reporting" />
+        </top>
+
+        <!-- Center Section: Form and Table inside a ScrollPane -->
+        <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true">
+                <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 10;">
+                    <!-- ComboBox for selecting the class -->
+                    <HBox spacing="10">
+                        <Label text="Class Name:" />
+                        <ComboBox fx:id="classComboBox" promptText="Select Class" />
+                    </HBox>
+
+                    <!-- DatePicker for selecting the class date -->
+                    <HBox spacing="10">
+                        <Label text="Class Date:" />
+                        <DatePicker fx:id="classDatePicker" promptText="Select Class Date" />
+                    </HBox>
+
+                    <!-- TextField for entering the chapter -->
+                    <HBox spacing="10">
+                        <Label text="Chapter:" />
+                        <TextField fx:id="chapterField" promptText="Enter Chapter" />
+                    </HBox>
+
+                    <!-- TextArea for entering the learning outcomes with a fixed size -->
+                    <HBox spacing="10">
+                        <Label text="Learning Outcomes:" />
+                        <TextArea fx:id="outcomeField" prefHeight="100" prefWidth="300" promptText="Enter Learning Outcomes" />
+                    </HBox>
+
+                    <!-- TableView for displaying student information with a fixed size -->
+                    <TableView fx:id="attendanceTable" prefHeight="200" prefWidth="350">
+                        <columns>
+                            <TableColumn fx:id="studentIdColumn" text="Student ID" />
+                            <TableColumn fx:id="studentNameColumn" text="Name" />
+                            <TableColumn fx:id="studentGenderColumn" text="Gender" />
+                            <TableColumn fx:id="presentColumn" text="Present" />
+                        </columns>
+                    </TableView>
+
+                    <!-- Button to save attendance and outcomes -->
+                    <Button onAction="#saveAttendanceAndOutcomes" text="Save Attendance" />
+                </VBox>
+            </ScrollPane>
+        </center>
+
+        <!-- Bottom Section: Submit and Logout Buttons -->
+        <bottom>
+            <VBox alignment="CENTER" spacing="20">
+                <!-- Buttons at the bottom -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="logoutButton" onAction="#handleLogout" text="Logout" />
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luctfxapp.LecturerReports">
+    <ImageView fitHeight="68.0" fitWidth="172.0" layoutX="197.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@LINK.png" />
+    </ImageView>
+    <Button fx:id="logoutButton" blendMode="DIFFERENCE" layoutX="513.0" layoutY="31.0" onAction="#handleLogout" text="Logout" textFill="#403535" />
+   <Button fx:id="backButton" blendMode="DIFFERENCE" layoutX="513.0" layoutY="71.0" onAction="#handleLogout" text="Back" textFill="#403535" />
+    <TableView fx:id="attendanceTable" layoutX="50.0" layoutY="100.0" prefHeight="250.0" prefWidth="500.0">
+        <columns>
+            <TableColumn fx:id="colClassDate" text="Class Date" />
+            <TableColumn fx:id="colClassName" text="Class Name" />
+            <TableColumn fx:id="colChapter" text="Chapter" />
+            <TableColumn fx:id="colStudentName" text="Student Name" />
+            <TableColumn fx:id="colPresent" text="Present" />
+        </columns>
+    </TableView>
+</AnchorPane>
